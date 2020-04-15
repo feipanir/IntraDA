@@ -1,3 +1,6 @@
+#--------------------------------------------------------------------
+# modified from "ADVENT/advent/domain_adaptation/train_UDA.py" by Tuan-Hung Vu
+#--------------------------------------------------------------------
 import os
 import sys
 from pathlib import Path

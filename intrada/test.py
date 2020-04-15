@@ -1,5 +1,5 @@
 #--------------------------------------------------------------------
-# modified from "ADVENT/advent/dataset/cityscapes.py" by Tuan-Hung Vu
+# modified from "ADVENT/advent/scripts/test.py" by Tuan-Hung Vu
 #--------------------------------------------------------------------
 import argparse
 import os
