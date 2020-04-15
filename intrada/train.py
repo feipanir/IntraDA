@@ -1,12 +1,6 @@
-# --------------------------------------------------------
-# AdvEnt training
-# Copyright (c) 2019 valeo.ai
-#
-# Written by Tuan-Hung Vu
-# --------------------------------------------------------
-import sys
-sys.path.append('/home/feipan/IntraDA/ADVENT')
-
+#--------------------------------------------------------------------
+# modified from "ADVENT/advent/dataset/cityscapes.py" by Tuan-Hung Vu
+#--------------------------------------------------------------------
 import argparse
 import os
 import os.path as osp

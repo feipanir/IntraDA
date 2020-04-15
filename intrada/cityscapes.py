@@ -1,3 +1,6 @@
+#--------------------------------------------------------------------
+# modified from "ADVENT/advent/dataset/cityscapes.py" by Tuan-Hung Vu
+#--------------------------------------------------------------------
 import numpy as np
 
 from advent.utils import project_root

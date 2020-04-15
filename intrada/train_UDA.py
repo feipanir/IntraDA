@@ -1,9 +1,3 @@
-# --------------------------------------------------------
-# Domain adpatation training
-# Copyright (c) 2019 valeo.ai
-#
-# Written by Tuan-Hung Vu
-# --------------------------------------------------------
 import os
 import sys
 from pathlib import Path
