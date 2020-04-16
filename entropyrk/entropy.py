@@ -23,7 +23,6 @@ from advent.utils.func import loss_calc, bce_loss
 from advent.domain_adaptation.config import cfg, cfg_from_file
 from matplotlib import pyplot as plt
 from matplotlib import image  as mpimg
-import pdb
 
 
 #------------------------------------- color -------------------------------------------
@@ -85,7 +84,7 @@ def get_arguments():
     Parse input arguments 
     """
     parser = argparse.ArgumentParser(description="Code for evaluation")
-    parser.add_argument('--best_iter', type=int, default=None, 
+    parser.add_argument('--best_iter', type=int, default=70000,
                         help='iteration with best mIoU')
     parser.add_argument('--lambda1', type=float, default=0.67, 
                         help='hyperparameter lambda to split the target domain')

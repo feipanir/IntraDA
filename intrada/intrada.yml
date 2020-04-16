@@ -1,8 +1,8 @@
 SOURCE: CityscapesEasy
 TARGET: CityscapesHard
 DATA_DIRECTORY_SOURCE: ../ADVENT/data/Cityscapes
-DATA_LIST_SOURCE: ../entropy/easy_split.txt
-DATA_LIST_TARGET: ../entropy/hard_split.txt
+DATA_LIST_SOURCE: ../entropyrk/easy_split.txt
+DATA_LIST_TARGET: ../entropyrk/hard_split.txt
 NUM_WORKERS: 1
 TRAIN:
   INPUT_SIZE_SOURCE:

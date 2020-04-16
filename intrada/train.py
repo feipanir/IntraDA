@@ -20,7 +20,6 @@ from cityscapes import CityscapesDataSet as CityscapesDataSet_easy
 from advent.domain_adaptation.config import cfg, cfg_from_file
 from train_UDA import train_domain_adaptation
 
-import pdb
 
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 warnings.filterwarnings("ignore")

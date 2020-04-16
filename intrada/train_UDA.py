@@ -22,7 +22,6 @@ from advent.utils.func import loss_calc, bce_loss
 from advent.utils.loss import entropy_loss
 from advent.utils.func import prob_2_entropy
 from advent.utils.viz_segmask import colorize_mask
-import pdb
 
 
 def load_checkpoint_for_evaluation(model, checkpoint, device):

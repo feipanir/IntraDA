@@ -13,7 +13,6 @@ from advent.model.deeplabv2 import get_deeplab_v2
 from advent.dataset.cityscapes import CityscapesDataSet
 from advent.domain_adaptation.config import cfg, cfg_from_file
 from advent.domain_adaptation.eval_UDA import evaluate_domain_adaptation
-import pdb
 
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 warnings.filterwarnings("ignore")

@@ -6,7 +6,6 @@ import numpy as np
 from advent.utils import project_root
 from advent.utils.serialization import json_load
 from advent.dataset.base_dataset import BaseDataset
-import pdb
 
 DEFAULT_INFO_PATH = project_root / 'advent/dataset/cityscapes_list/info.json'
 
