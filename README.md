@@ -91,7 +91,8 @@ Pre-trained models can be downloaded [here](https://github.com/valeoai/ADVENT/re
 For evaluation, execute:
 ```bash
 $ cd <root_dir>/intrada
-$ python test.py --cfg ./configs/advent_pretrained.yml
+$ python test.py --cfg intrada_trained.yml 
+$ python test.py --cfg intrada_trained_withnorm.yml # test on models trained wih entropy normalization
 ```
 
 ### Training
@@ -119,6 +120,7 @@ Step 2. Entropy-based ranking to split Cityscapes training set into easy split a
 ```bash
 $ cd <root_dir>/entropyrk
 $ python entropy.py --best_iter 75000 # choose the iteration with Best IoU from step 1.
+$ python entropy.py --best_iter 75000 --normalize True # add a normalizor to the entropy ranking system
 ```
 You will see the pseudo labels generated in ```color_masks```, the easy split file names in ```easy_splt.txt```, and the hard split file names in ```hard_split.txt```.
 

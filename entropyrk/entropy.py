@@ -25,15 +25,19 @@ from matplotlib import pyplot as plt
 from matplotlib import image  as mpimg
 
 
+
 #------------------------------------- color -------------------------------------------
 palette = [128, 64, 128, 244, 35, 232, 70, 70, 70, 102, 102, 156, 190, 153, 153, 153, 153, 153, 250, 170, 30,
            220, 220, 0, 107, 142, 35, 152, 251, 152, 70, 130, 180, 220, 20, 60, 255, 0, 0, 0, 0, 142, 0, 0, 70,
            0, 60, 100, 0, 80, 100, 0, 0, 230, 119, 11, 32]
+
 zero_pad = 256 * 3 - len(palette)
 for i in range(zero_pad):
     palette.append(0)
-#------------------------------------- color -------------------------------------------
-
+# The rare classes trainID from cityscapes dataset
+# These classes are: 
+#    wall, fence, pole, traffic light, trafflic sign, terrain, rider, truck, bus, train, motor.
+rare_class = [3, 4, 5, 6, 7, 9, 12, 14, 15, 16, 17]
 
 
 def colorize(mask):
@@ -53,6 +57,15 @@ def colorize_save(output_pt_tensor, name):
     name = name.split('/')[-1]
     mask_Img.save('./color_masks/%s' % (name))
     mask_color.save('./color_masks/%s_color.png' % (name.split('.')[0]))
+
+def find_rare_class(output_pt_tensor):
+    output_np_tensor = output_pt_tensor.cpu().data[0].numpy()
+    mask_np_tensor   = output_np_tensor.transpose(1,2,0)
+    mask_np_tensor   = np.asarray(np.argmax(mask_np_tensor, axis=2), dtype=np.uint8)
+    mask_np_tensor   = np.reshape(mask_np_tensor, 512*1024)
+    unique_class     = np.unique(mask_np_tensor).tolist()
+    commom_class     = set(unique_class).intersection(rare_class)
+    return commom_class
 
 
 def cluster_subdomain(entropy_list, lambda1):
@@ -84,8 +97,11 @@ def get_arguments():
     Parse input arguments 
     """
     parser = argparse.ArgumentParser(description="Code for evaluation")
+
     parser.add_argument('--best_iter', type=int, default=70000,
                         help='iteration with best mIoU')
+    parser.add_argument('--normalize', type=bool, default=False,
+                        help='add normalizor to the entropy ranking')
     parser.add_argument('--lambda1', type=float, default=0.67, 
                         help='hyperparameter lambda to split the target domain')
     parser.add_argument('--cfg', type=str, default='../ADVENT/advent/scripts/configs/advent.yml',
@@ -144,8 +160,12 @@ def main(args):
         with torch.no_grad():
             _, pred_trg_main = model_gen(image.cuda(device))
             pred_trg_main    = interp_target(pred_trg_main)
+            if args.normalize == True:
+                normalizor = (11-len(find_rare_class(pred_trg_main))) / 11.0 + 0.5
+            else:
+                normalizor = 1
             pred_trg_entropy = prob_2_entropy(F.softmax(pred_trg_main))
-            entropy_list.append((name[0], pred_trg_entropy.mean().item()))
+            entropy_list.append((name[0], pred_trg_entropy.mean().item() * normalizor))
             colorize_save(pred_trg_main, name[0])
 
     # split the enntropy_list into 
