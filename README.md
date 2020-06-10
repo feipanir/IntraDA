@@ -1,7 +1,7 @@
 # Unsupervised Intra-domain Adaptation for Semantic Segmentation through Self-Supervision
 
 
-[[Project Page]](https://feipan664.github.io/IntraDA/) [[Youtube]](https://youtu.be/x1KLka4iQlo) [[DemoVideo]](https://youtu.be/Cy71aWeHQe4) [[讲演视频]](https://www.bilibili.com/video/BV1NZ4y1H7RC/) [[效果演示]](https://www.bilibili.com/video/BV1QK4y1x7oA/)
+[[Project Page]](https://feipan664.github.io/IntraDA/) [[Presentation]](https://youtu.be/x1KLka4iQlo) [[DemoVideo]](https://youtu.be/Cy71aWeHQe4) [[讲演视频]](https://www.bilibili.com/video/BV1NZ4y1H7RC/) [[效果演示]](https://www.bilibili.com/video/BV1QK4y1x7oA/)
  
 ### CVPR 2020 Oral
 
