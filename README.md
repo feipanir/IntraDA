@@ -53,7 +53,7 @@ This repo is heavily borrowed from [ADVENT](https://github.com/valeoai/ADVENT.gi
 ## Installation
 0. Clone the repo:
 ```bash
-$ git clone --recursive https://github.com/feipan664/IntraDA.git
+$ git clone https://github.com/feipan664/IntraDA.git
 $ cd IntraDA
 ```
 
