@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>mGANprior</title>
+
+  <link href="./figure/bootstrap.min.css" rel="stylesheet">
+  <link href="./figure/font.css" rel="stylesheet" type="text/css">
+  <link href="./figure/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://www.kaist.ac.kr/en/" target="_blank"><img src="./figure/logo_kaist.png" style="position:relative; right:10px; top:0px; width:200px; border:none;"></a>
+    </div>
+    <div class="logo">
+      <a href="http://rcv.kaist.ac.kr/" target="_blank"><img src="./figure/logo_rcv.png" style="position:relative; right:-650px; top:0px; width:150px; border:none;" ></a>
+    </div>
+    <div class="title", style="padding-top: 70pt;">
+      Unsupervised Intra-domain Adaptation for Semantic Segmentation through Self-Supervision
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <!-- <a href="http://www.jasongt.com" target="_blank">Jinjin Gu</a><sup>1</sup>&nbsp; -->
+    <!-- <a href="http://shenyujun.github.io" target="_blank">Yujun Shen</a><sup>2</sup>&nbsp; -->
+    <!-- <a href="http://bzhou.ie.cuhk.edu.hk" target="_blank">Bolei Zhou</a><sup>2</sup>&nbsp; -->
+    <a href="https://feipan664.github.io" target="_blank">Fei Pan</a>&nbsp&nbsp&nbsp;
+    <a href="https://dlsrbgg33.wixsite.com/inkyushin" target="_blank">Inkyu Shin</a>&nbsp&nbsp&nbsp;
+    <a href="https://rameau-fr.github.io" target="_blank">Francois Rameau</a>&nbsp&nbsp&nbsp;
+    <a href="https://sites.google.com/site/seokjucv/" target="_blank">Seokju Lee</a>&nbsp&nbsp&nbsp;			
+	<a href="http://rcv.kaist.ac.kr/index.php?mid=rcv_faculty" target="_blank">In So Kweon</a>&nbsp&nbsp&nbsp;			
+
+  </div>
+  <div class="institution">
+    <!-- <sup>1</sup>The Chinese University of Hong Kong, Shenzhen<br> -->
+    <!-- <sup>2</sup>The Chinese University of Hong Kong -->
+    KAIST
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/pdf/2004.07703.pdf" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/feipan664/IntraDA" target="_blank">[Code]</a>&nbsp;
+    <a href="https://youtu.be/x1KLka4iQlo" target="_blank">[Presentation]</a>&nbsp;
+    <a href="https://youtu.be/Cy71aWeHQe4" target="_blank">[DemoVideo]</a>&nbsp;<br>
+    <a href="https://www.bilibili.com/video/BV1NZ4y1H7RC/" target="_blank">[讲演视频]</a>&nbsp;
+    <a href="https://www.bilibili.com/video/BV1QK4y1x7oA/" target="_blank">[效果演示]</a>&nbsp;
+  </div>
+  <div class="teaser">
+    <img src="./figure/10193-teaser.gif" style="width:600px; border:none;">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    For domain adaptation, previous works have considered directly adapting models from the source data to the unlabeled target data (to reduce the inter-domain gap). Nonetheless, these techniques do not consider the large distribution gap among the target data itself (intra-domain gap). In this work, we propose a two-step self-supervised domain adaptation approach to minimize the inter-domain and intra-domain gap together. First, we conduct the inter-domain adaptation of the model; from this adaptation, we separate the target domain into an easy and hard split using an entropy-based ranking function. Finally, to decrease the intra-domain gap, we propose to employ a self-supervised adaptation technique from the easy to the hard split.
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  
+  <div class="body">
+    <font size=5>Domain adaptation results from GTA5 to Cityscapes:</font>
+    <table width="100%" style="margin: 20pt auto; text-align: center;">
+      <tr>
+        <td><img src="./figure/result1.png" width="100%"></td>
+      </tr>
+    </table>
+
+    <font size=5>Easy samples and hard samples:</font>
+    <table width="100%" style="margin: 20pt auto; text-align: center;">
+      <tr>
+        <td><img src="./figure/result2.png" width="100%"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <div class='title'>Video</div>
+  <div class='body'>
+    <font size=5> Qualitative results on Cityscapes DemoVideo:</font> <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Cy71aWeHQe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+</div>
+<!-- === Result Section Ends === -->
+<!-- <iframe src="//player.bilibili.com/player.html?aid=883470834&bvid=BV1QK4y1x7oA&cid=200248662&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@inproceedings{pan2020unsupervised,
+  title     = {Unsupervised Intra-domain Adaptation for Semantic Segmentation through Self-Supervision},
+  author    = {Pan, Fei and Shin, Inkyu and Rameau, Francois and Lee, Seokju and Kweon, In So},
+  booktitle = {IEEE Conference on Computer Vision and Pattern Recoginition (CVPR)},
+  year      = {2020}
+}
+</pre>
+
+<div class="ref"> Related Work</div>
+  <div class='citation'>
+    <div class='image'><img src="./figure/adaptsegnet.png"></div>
+    <div class='comment'>
+        <a href="https://arxiv.org/pdf/1802.10349.pdf" target='_blank'>
+            [1] Y. Tsai, W. Hung, S. Schulter, K. Sohn.
+            Learning to Adapt Structured Output Space for Semantic Segmentation.
+            CVPR 2018.</a><br>
+        <b>Comment:</b>
+        An adversarial learning method for domain adaptation on structured segmentation outputs space.
+        </div>
+    <div class='image'><img src="./figure/advent.png"></div>
+    <div class='comment'>
+        <a href="https://arxiv.org/pdf/1802.10349.pdf" target='_blank'>
+            [2] T. Vu, H. Jian, M. Bucher, M. Cord, P. Perez.
+            ADVENT: Adversarial Entropy Minimization for Domain Adaptation in Semantic Segmentation.
+            CVPR 2019.</a><br>
+        <b>Comment:</b>
+        Adapt from the source to the target domain on entropy space.
+        </div>
+  </div>
+
+</body>
+</html>
