@@ -68,7 +68,7 @@
 <div class="section">
   <div class="title">Overview</div>
   <div class="body">
-    For domain adaptation, previous works have considered directly adapting models from the source data to the unlabeled target data (to reduce the inter-domain gap). Nonetheless, these techniques do not consider the large distribution gap among the target data itself (intra-domain gap). In this work, we propose a two-step self-supervised domain adaptation approach to minimize the inter-domain and intra-domain gap together. First, we conduct the inter-domain adaptation of the model; from this adaptation, we separate the target domain into an easy and hard split using an entropy-based ranking function. Finally, to decrease the intra-domain gap, we propose to employ a self-supervised adaptation technique from the easy to the hard split.
+    Previous works of Domain Adaptation have considered directly adapting segmentation models from the source data to the unlabeled target data (to reduce the inter-domain gap). Nonetheless, these techniques do not consider the large distribution gap among the target data itself (intra-domain gap). In this work, we propose a two-step self-supervised domain adaptation approach to minimize the inter-domain and intra-domain gap together. First, we conduct the inter-domain adaptation of the model; from this adaptation, we separate the target domain into an easy and hard split using an entropy-based ranking function. Finally, to decrease the intra-domain gap, we propose to employ a self-supervised adaptation technique from the easy to the hard split.
   </div>
 </div>
 <!-- === Overview Section Ends === -->
@@ -100,7 +100,7 @@
   <div class='body'>
     <font size=5> Qualitative results on Cityscapes DemoVideo:</font> <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Cy71aWeHQe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
-    <font size=3> Notes: the trained on GTA5 results are from the segmentation model only trained by GTA5 24966 annotated data; the trained on Cityscapes results are from the segmentation model fully trained on Cityscapes 2975 annotated images. The results of our model are achieved by using GTA5 24966 labeled images with Cityscapes 2975 unlabeled images. Theoretically, the accuracy level of our results should be between trained on GTA5 and trained on Cityscapes. </font> <br>
+    <font size=3> Notes: the trained on GTA5 results are from the segmentation model only trained by GTA5 24966 annotated data; the trained on Cityscapes results are from the segmentation model fully trained on Cityscapes 2975 annotated images; the results of our model are achieved by using GTA5 24966 labeled images with Cityscapes 2975 unlabeled images. Theoretically, the accuracy level of our results should be between trained on GTA5 and trained on Cityscapes. </font> <br>
 </div>
 </div>
 
