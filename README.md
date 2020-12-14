@@ -97,7 +97,7 @@ We follow set-ups from [ADVENT](https://github.com/valeoai/ADVENT.git). The data
 ```
 
 ### Pretrained and evaluation models
-Please download the [pretrained model](https://1drv.ms/u/s!AthTAwNfTh-YhHBPQ1VDwhhV7-YD?e=ugrRIX) and put in ```<root_dir>/ADVENT/pretrained_models```. And please download the [evaluation models](https://1drv.ms/u/s!AthTAwNfTh-YhHFNRndR6c8BLnak?e=t6ivd6) for evaluation process.
+Please download the [pretrained model](https://1drv.ms/u/s!AthTAwNfTh-YhkyC7XOGHUEwxtk7?e=tid19j) and put in ```<root_dir>/ADVENT/pretrained_models```. And please download the [evaluation models](https://1drv.ms/u/s!AthTAwNfTh-Yhkt8qVVtIUCT5g4l?e=yKffxB) for evaluation process. Moreover, the trained AdvEnt model is shared [here](https://github.com/valeoai/ADVENT/releases/download/v0.1/gta2cityscapes_advent.pth) 
 
 
 ### Running the code
