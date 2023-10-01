@@ -4,6 +4,7 @@
 # to get the entropy ranking from Inter-domain adaptation process 
 #-----------------------------------------------------------
 import sys
+sys.path.append('../ADVENT')
 from tqdm import tqdm
 import argparse
 import os

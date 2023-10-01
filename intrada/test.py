@@ -1,6 +1,8 @@
 #--------------------------------------------------------------------
 # modified from "ADVENT/advent/scripts/test.py" by Tuan-Hung Vu
 #--------------------------------------------------------------------
+import sys
+train_UDA_ORI.py
 import argparse
 import os
 import os.path as osp

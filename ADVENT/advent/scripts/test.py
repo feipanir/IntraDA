@@ -5,8 +5,8 @@
 # Written by Tuan-Hung Vu
 # --------------------------------------------------------
 import sys
-sys.path.append('/home/feipan/IntraDA/ADVENT')
-import pdb
+sys.path.append('../../')
+# import pdb
 
 import argparse
 import os
@@ -71,7 +71,7 @@ def main(config_file, exp_suffix):
         return
 
     # dataloaders
-    pdb.set_trace()
+    # pdb.set_trace()
     test_dataset = CityscapesDataSet(root=cfg.DATA_DIRECTORY_TARGET,
                                      list_path=cfg.DATA_LIST_TARGET,
                                      set=cfg.TEST.SET_TARGET,
