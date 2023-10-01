@@ -30,7 +30,7 @@ class CityscapesDataSet(BaseDataset):
         # label_name = name.replace("leftImg8bit", "gtFine_labelIds")
         # pdb.set_trace()
         label_name = name.split('/')[1]
-        label_file = '../entropy/color_masks/' + label_name 
+        label_file = '../entropy_rank/color_masks/' + label_name
         # label_file = self.root / 'gtFine' / self.set / label_name
         return img_file, label_file
 
