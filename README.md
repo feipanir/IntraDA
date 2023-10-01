@@ -122,7 +122,7 @@ $ cd <root_dir>/ADVENT/advent/scripts
 $ python train.py --cfg ./configs/advent.yml 
 $ python train.py --cfg ./configs/advent.yml --tensorboard % using tensorboard
 ```
-After inter-domain training, it is needed to get best IoU iteration by runing:
+After inter-domain training, it is needed to get best IoU iteration by running:
 ```bash
 $ cd <root_dir>/ADVENT/advent/scripts
 $ python test.py --cfg ./configs/advent.yml
