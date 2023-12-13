@@ -4,6 +4,8 @@
 #
 # Written by Tuan-Hung Vu
 # --------------------------------------------------------
+import sys
+sys.path.append('../../')
 import argparse
 import os
 import os.path as osp

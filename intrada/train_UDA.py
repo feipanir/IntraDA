@@ -3,6 +3,7 @@
 #--------------------------------------------------------------------
 import os
 import sys
+sys.path.append('../ADVENT')
 from pathlib import Path
 
 import os.path as osp

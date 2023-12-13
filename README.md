@@ -119,13 +119,13 @@ By default, logs and snapshots are stored in ```<root_dir>/experiments``` with t
 **Step 1.** Conduct inter-domain adaptation by training [ADVENT](https://github.com/valeoai/ADVENT.git): 
 ```bash
 $ cd <root_dir>/ADVENT/advent/scripts
-$ python train.py --cfg ./config/advent.yml 
-$ python train.py --cfg ./config/advent.yml --tensorboard % using tensorboard
+$ python train.py --cfg ./configs/advent.yml 
+$ python train.py --cfg ./configs/advent.yml --tensorboard % using tensorboard
 ```
-After inter-domain training, it is needed to get best IoU iteration by runing:
+After inter-domain training, it is needed to get best IoU iteration by running:
 ```bash
 $ cd <root_dir>/ADVENT/advent/scripts
-$ python test.py --cfg ./config/advent.yml
+$ python test.py --cfg ./configs/advent.yml
 ```
 The best IoU iteration ```BEST_ID``` will be a parameter to **step 2**. 
 
